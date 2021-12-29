@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+--Soft blue: hsl(215, 51%, 70%);
+--Cyan: hsl(178, 100%, 50%);
+--main-bg : hsl(217, 54%, 11%);
+--card-bg : hsl(216, 50%, 16%);
+--line : hsl(215, 32%, 27%);
+--White: hsl(0, 0%, 100%);
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'Outfit', sans-serif;
+    padding: 1.5rem;
+}
+.container {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+.container .main-image {
+    position: relative;
+}
+.container .main-image img {
+    max-width: 100%;
+  
+    
+    border-radius: 10px;
+
+}
+.container .main-image div {
+    position: absolute;
+    top: 0;
+    background-color: hsl(178, 100%, 52%,60%);
+    width: 100%;
+    height: calc(100% - 4px);
+    z-index: 5;
+   opacity: 0;
+   border-radius: 10px;
+   transition: opacity 0.3s ease-in-out;
+}
+.container .main-image div img {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+ 
+}
+.container .main-image div:hover {
+    cursor: pointer;
+    opacity: 1;
+    
+}
+.container h1 {
+    display: inline-block;
+    color: var(--White);
+    margin: 20px auto;
+}
+.container h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.container p {
+  font-size: 18px;
+  font-weight: 300;
+  color:hsl(0, 0%, 60% );
+  margin: 20px auto;
+}
+.container ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--line);
+}
+.container ul li {
+    color: hsl(0, 0%, 60%);
+    display: flex;
+    align-items: center;
+    padding: 10px 0px;
+    
+}
+.container ul li img {
+   margin-right: 10px;
+}
+.container ul li:first-child {
+    color: var(--Cyan)
+}
+.avatar {
+    display: flex;
+    align-items: center;
+    
+
+}
+.avatar img {
+    width: 70px;
+    margin-top: 10px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+.avatar p {
+    margin-left: 20px;
+}
+.avatar p span {
+    color: var(--White);
+}
+.avatar p span:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+.attribution {
+   margin-top: 10px;
+   text-align: center;
+}
+.attribution a {
+   color: var(--White);
+}
+@media screen and (min-width:500px) {
+    .container {
+        width: 400px;
+        margin: 0 auto;
+    }
+}
